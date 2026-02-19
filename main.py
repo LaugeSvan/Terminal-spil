@@ -28,6 +28,7 @@ def main(gange_tilbgae=defult):
         gange_tilbgae = gange_tilbgae - 1
 
         ins = int(input("prøv igen --> "))
+    
 while True:
 
     print("hvis du ikke skriver noget gård den til spil automatisk")
@@ -37,9 +38,11 @@ while True:
     ins = input("Skriv her --> ")
 
     if ins == "Indstillinger":
-        input = input("hvor mange gange skal du have hver gang --> ") 
+        inputs = input("hvor mange gange skal du have hver gang --> ") 
         with open("pref.txt", "w") as con:
-            con.write(input)
+            con.write(inputs)
+        main()
+        break
 
     else:
         main()
